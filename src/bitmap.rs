@@ -7,7 +7,7 @@ use core::hash::{Hash, Hasher};
 use core::mem::{size_of, MaybeUninit};
 use core::ops::*;
 
-use crate::types::{BitOps, Bits, BitsImpl};
+use crate::types::{BitOps, Bits, BitsImpl, InitDefault};
 
 /// A compact array of bits.
 ///
@@ -40,7 +40,7 @@ where
 {
     fn default() -> Self {
         Bitmap {
-            data: <BitsImpl<SIZE> as Bits>::Store::default(),
+            data: <BitsImpl<SIZE> as Bits>::Store::init(),
         }
     }
 }

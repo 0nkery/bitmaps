@@ -58,4 +58,4 @@ mod types;
 #[doc(inline)]
 pub use crate::bitmap::{Bitmap, Iter};
 #[doc(inline)]
-pub use crate::types::{BitOps, Bits, BitsImpl};
+pub use crate::types::{BitOps, Bits, BitsImpl, InitDefault};
